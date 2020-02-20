@@ -2,20 +2,79 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1>HELLO WORLD</h1>
-        <script src="" async defer></script>
-    </body>
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alex Rodriguez</title>
+    <meta name="Beta Port" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script type="text/javascript" src="./scrollToElement.js" defer></script>
+
+</head>
+
+<body>
+    <div id="landing">
+        <span title="Learn" class="arrowbtn arrowbtn-down" onclick="scrollToElement()"></span>
+    </div>
+    <nav class="nav">
+        <ul style="display: contents;">
+            <span onCLick="scrollToElement()"> HOME</span>
+            <a>ABOUT</a>
+            <a>PROJECTS</a>
+            <a>RESUME</a>
+        </ul>
+    </nav>
+
+    <div id="about">
+        <p class="roboto" style="padding-top: 7em;">
+            Hello, World! I'm a creative full-stack software engineer passionate about developing practical and
+            efficient
+            applications. When I'm not coding, I'm either dabbling in <a class="about-href"
+                href="https://www.google.com" target="_blank">graphic design</a> or working on <a class="about-href"
+                href="https://www.youtube.com/channel/UCY_5HDyUz8G_wI7vSuQSECQ" target="_blank">my podcast</a>.
+        </p>
+
+        <div class="stack">
+            <img class="stack-logo" src="public/js-logo.png" />
+            <img class="stack-logo" src="public/react_logo.png" />
+            <img class="stack-logo" src="public/ruby.png" />
+            <img class="stack-logo" src="public/Ruby_On_Rails_Logo.svg.png" />
+            <img class="stack-logo" src="public/css3.png" />
+            <img class="stack-logo" src="public/html5.png" />
+            <img class="stack-logo" src="public/photoshop.png" />
+        </div>
+
+        <p class="roboto">
+            I'm proficient in Javascript, React.js, Ruby, Ruby on Rails, CSS3, HTML5, and Adobe Photoshop.
+        </p>
+        <br />
+    </div>
+
+    <div class="projects-section">
+        <h1>Projects</h1>
+        <br />
+        <div id="video-stack">
+            <img src="public/findmybeerimg.png" class="video-img" />
+                <img src="public/mobfliximg.png" class="video-img" />
+                <img src="public/nilclassdestroyerimg.png" class="video-img" />
+            <!-- <div class="container">
+                <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg="
+                    class='video-img'/>
+                <p class="title">FindMyBeer</p>
+                <div class="overlay"></div>
+                <div class="button"><a href="#"> Learn More </a></div>
+            </div> -->
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
 </html>
