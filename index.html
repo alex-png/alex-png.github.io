@@ -24,7 +24,7 @@
     </div>
     <nav class="nav">
         <ul style="display: contents;">
-            <span onCLick="scrollToElement()"> HOME</span>
+            <span onclick="scrollToElement()"> HOME</span>
             <a>ABOUT</a>
             <a>PROJECTS</a>
             <a>RESUME</a>
@@ -41,13 +41,31 @@
         </p>
 
         <div class="stack">
-            <img class="stack-logo" src="public/js-logo.png" />
-            <img class="stack-logo" src="public/react_logo.png" />
-            <img class="stack-logo" src="public/ruby.png" />
-            <img class="stack-logo" src="public/Ruby_On_Rails_Logo.svg.png" />
-            <img class="stack-logo" src="public/css3.png" />
-            <img class="stack-logo" src="public/html5.png" />
-            <img class="stack-logo" src="public/photoshop.png" />
+
+            <span onclick="scrollToElement()" style="text-decoration:none">
+                <img class="stack-logo" src="public/js-logo.png" />
+            </span>
+
+            <span>
+                <img class="stack-logo" src="public/react_logo.png" />
+            </span>
+
+            <span>
+                <img class="stack-logo" src="public/ruby.png" />
+            </span>
+            <span>
+                <img class="stack-logo" src="public/Ruby_On_Rails_Logo.svg.png" />
+            </span>
+            <span>
+                <img class="stack-logo" src="public/css3.png" />
+            </span>
+
+            <span>
+                <img class="stack-logo" src="public/html5.png" />
+            </span>
+            <span>
+                <img class="stack-logo" src="public/photoshop.png" />
+            </span>
         </div>
 
         <p class="roboto">
@@ -60,21 +78,27 @@
         <h1>Projects</h1>
         <br />
         <div id="video-stack">
-            <img src="public/findmybeerimg.png" class="video-img" />
-                <img src="public/mobfliximg.png" class="video-img" />
-                <img src="public/nilclassdestroyerimg.png" class="video-img" />
-            <!-- <div class="container">
-                <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg="
-                    class='video-img'/>
-                <p class="title">FindMyBeer</p>
-                <div class="overlay"></div>
-                <div class="button"><a href="#"> Learn More </a></div>
-            </div> -->
+            <div class="container">
+                <img src="public/findmybeerimg.png" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <button name="video" class="text" type="button" onclick="scrollToElement()">Learn More</button>
+                </div>
+            </div>
 
+            <div class="container">
+                <img src="public/mobfliximg.png" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <button name="video" class="text" onclick="scrollToElement()">Learn More</button>
+                </div>
+            </div>
+            <div class="container">
+                <img src="public/findmybeerimg.png" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+                    <button name="video" class="text" onclick="scrollToElement()">Learn More</button>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-
 </body>
 
 </html>

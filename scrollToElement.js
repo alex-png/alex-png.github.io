@@ -19,5 +19,7 @@ function scrollToElement() {
     } else if (event.target.name === "Contact"){
         console.log(event.target.name)
         contact.scrollIntoView({behavior: "smooth", block: "start"})
-    }
+    }else if (event.target.name === "video"){
+        console.log("OPEN MODAL")
+        }
 }   
