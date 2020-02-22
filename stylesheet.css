@@ -161,6 +161,9 @@ body{
   position: relative;
   max-width: 25em;
   margin: 1em;
+  cursor: pointer;
+  background: black;
+
 }
 
 .image {
@@ -181,6 +184,7 @@ body{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  font-size: smaller;
 }
 
 .container:hover .image {
@@ -190,10 +194,20 @@ body{
 .container:hover .middle {
   opacity: 1;
 }
-button{
-  background-position: center;
-  font-family: Turret Road;
-  background-color: white;
-  color: #29d9e4;
 
+.modal{
+    background: rgba(0,0,0, 0.90);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.video-btn{
+  border: solid;
+  padding: .5em;
 }

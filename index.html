@@ -36,37 +36,27 @@
             <p class="roboto" style="padding-top: 7em;">
                 Hello, World! I'm a creative full-stack software engineer passionate about developing practical and
                 efficient
-                applications. When I'm not coding, I'm either dabbling in <a class="about-href"
-                    href="https://www.google.com" target="_blank">graphic design</a> or working on <a class="about-href"
+                applications. When I'm not coding, I'm either <a class="about-href" href="https://www.google.com"
+                    target="_blank">dabbling in art</a> or working on <a class="about-href"
                     href="https://www.youtube.com/channel/UCY_5HDyUz8G_wI7vSuQSECQ" target="_blank">my podcast</a>.
             </p>
 
             <div class="stack">
 
-                <span onclick="scrollToElement()" style="text-decoration:none">
-                    <img class="stack-logo" src="public/js-logo.png" />
-                </span>
-
-                <span>
-                    <img class="stack-logo" src="public/react_logo.png" />
-                </span>
-
-                <span>
-                    <img class="stack-logo" src="public/ruby.png" />
-                </span>
-                <span>
-                    <img class="stack-logo" src="public/Ruby_On_Rails_Logo.svg.png" />
-                </span>
-                <span>
-                    <img class="stack-logo" src="public/css3.png" />
-                </span>
-
-                <span>
-                    <img class="stack-logo" src="public/html5.png" />
-                </span>
-                <span>
-                    <img class="stack-logo" src="public/photoshop.png" />
-                </span>
+                <img name="projects-section" class="stack-logo" src="public/js-logo.png" style="cursor:pointer;"
+                    onclick="scrollToElement()" />
+                <img name="projects-section" class="stack-logo" src="public/react_logo.png" style="cursor:pointer;"
+                    onclick="scrollToElement()" />
+                <img name="projects-section" class="stack-logo" src="public/ruby.png" style="cursor:pointer;"
+                    onclick="scrollToElement()" />
+                <img name="projects-section" class="stack-logo" src="public/Ruby_On_Rails_Logo.svg.png"
+                    style="cursor:pointer;" onclick="scrollToElement()" />
+                <img name="projects-section" class="stack-logo" src="public/css3.png" style="cursor:pointer;"
+                    onclick="scrollToElement()" />
+                <img name="projects-section" class="stack-logo" src="public/html5.png" style="cursor:pointer;"
+                    onclick="scrollToElement()" />
+                <img name="projects-section" class="stack-logo" src="public/photoshop.png" style="cursor:pointer;"
+                    onclick="scrollToElement()" />
             </div>
 
             <p class="roboto">
@@ -76,31 +66,39 @@
         </div>
     </div>
 
-    <div class="projects-section">
-        <h1>Projects</h1>
+    <div class="projects-section" id="projects-section">
+        <h1 style="padding-top: 5vh;">Projects</h1>
         <br />
         <div id="video-stack">
-            <div class="container">
+            <div class="container" onclick="console.log('HELLO')">
                 <img src="public/findmybeerimg.png" alt="Avatar" class="image" style="width:100%">
                 <div class="middle">
-                    <button name="video" class="text" type="button" onclick="scrollToElement()">Learn More</button>
+                    <h1>FindMyBeer</h1>
+                    <p>Discover beers tailored to your unique preferences!</p>
+                    <p class="video-btn">Learn More</p>
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container" onclick="console.log('HELLO')">
                 <img src="public/mobfliximg.png" alt="Avatar" class="image" style="width:100%">
                 <div class="middle">
-                    <button name="video" class="text" onclick="scrollToElement()">Learn More</button>
+                    <h1>Mobflix</h1>
+                    <p>A Netflix emulator using movie clips from Youtube.</p>
+                    <p class="video-btn">Learn More</p>
                 </div>
             </div>
-            <div class="container">
-                <img src="public/findmybeerimg.png" alt="Avatar" class="image" style="width:100%">
+            <div class="container" onclick="console.log('HELLO')">
+                <img src="public/nilclassdestroyerimg.png" alt="Avatar" class="image" style="width:100%">
                 <div class="middle">
-                    <button name="video" class="text" onclick="scrollToElement()">Learn More</button>
+                    <h1>NilClass Destroyer</h1>
+                    <p>Destroy students of NilClass in this bubble shooter game!</p>
+                    <p class="video-btn">Learn More</p>
+
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
