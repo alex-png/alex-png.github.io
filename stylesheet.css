@@ -203,19 +203,20 @@ body{
     height: 100vh;
     z-index: 100;
     padding: 1em;
+    color:white;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: column; 
+    justify-content: center;
     text-align: center;
-    color:white
   }
 .video-btn{
   border: solid;
   padding: .5em;
 }
 .videoWrapper {
-  height: 20em;
-  width: 40em;
+  height: 90%;
+  width: 90%;
 }
 .videoWrapper iframe {
 	top: 0;
