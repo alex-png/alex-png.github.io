@@ -16,21 +16,23 @@ function handleClick() {
         contact.scrollIntoView({ behavior: "smooth", block: "start" })
     } else if (event.target.id === "FindMyBeer") {
         nav.insertAdjacentHTML("beforeend", modal)
-    } else if (event.target.className === "modal") {
-        this.event.target.remove()
+    } else if (event.target.className === "modal" || event.target.className === "close") {
+        document.getElementById("modal").remove()
     }
 }
 
 
 const modal = `
-    <div class="modal" onClick="handleClick()">
+    <div id="modal" class="modal" onClick="handleClick()">
+            <span class="close" "onClick="handleClick()"> X </span>
             <h1>FindMyBeer</h1>
+            <span class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; left: .5em;"><</span>
+            <span class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; right: .5em;">></span>
             <div class="videoWrapper">
                 <iframe src="https://www.youtube.com/embed/ABAshHF-Z70" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
-
             <div name="text">
                 <p style="font-size: large; padding-bottom: 1em;">Welcome to FindMyBeer! This is the first phase of my fifth and final project at The Flatiron School. This app
                 aims to provide users with beers that they are likely to enjoy based on initial input and further data
