@@ -209,14 +209,15 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: scroll;
   }
 .video-btn{
   border: solid;
   padding: .5em;
 }
 .videoWrapper {
-  height: 90%;
-  width: 90%;
+  height: 70%;
+  width: 80%;
 }
 .videoWrapper iframe {
 	top: 0;

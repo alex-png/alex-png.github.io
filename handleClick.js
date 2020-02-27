@@ -14,9 +14,9 @@ function handleClick() {
     } else if (event.target.name === "Contact") {
         console.log(event.target.name)
         contact.scrollIntoView({ behavior: "smooth", block: "start" })
-    } else if(event.target.id === "FindMyBeer"){
+    } else if (event.target.id === "FindMyBeer") {
         nav.insertAdjacentHTML("beforeend", modal)
-    }else if(event.target.className === "modal"){
+    } else if (event.target.className === "modal") {
         this.event.target.remove()
     }
 }
@@ -25,7 +25,6 @@ function handleClick() {
 const modal = `
     <div class="modal" onClick="handleClick()">
             <h1>FindMyBeer</h1>
-
             <div class="videoWrapper">
                 <iframe src="https://www.youtube.com/embed/ABAshHF-Z70" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -33,7 +32,7 @@ const modal = `
             </div>
 
             <div name="text">
-            <p style="font-size: x-large;">Welcome to FindMyBeer! This is the first phase of my fifth and final project at The Flatiron School. This app
+                <p style="font-size: large; padding-bottom: 1em;">Welcome to FindMyBeer! This is the first phase of my fifth and final project at The Flatiron School. This app
                 aims to provide users with beers that they are likely to enjoy based on initial input and further data
                 collection. With each "interested" or "not interested" click, data is parsed in the back end, and once
                 enough
@@ -44,6 +43,6 @@ const modal = `
                 forth.
     
                 The final phase will be entirely dedicated to design.
-        </p>
-        </div>
+                </p>
+            </div>
     </div>`
