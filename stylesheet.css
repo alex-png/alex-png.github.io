@@ -196,18 +196,30 @@ body{
 }
 
 .modal{
-    background: rgba(0,0,0, 0.90);
     position: fixed;
-    top: 0;
+    background: rgba(0,0,0, 0.90);
     left: 0;
-    width: 100vw;
+    top: 0;
     height: 100vh;
-    z-index: 3;
+    z-index: 100;
+    padding: 1em;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column; 
+    text-align: center;
+    color:white
   }
 .video-btn{
   border: solid;
   padding: .5em;
+}
+.videoWrapper {
+  height: 20em;
+  width: 40em;
+}
+.videoWrapper iframe {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
