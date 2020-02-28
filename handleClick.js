@@ -48,6 +48,9 @@ const fmbModal = `
                 forth.
     
                 The final phase will be entirely dedicated to design.
+                <br />
+                <a href="https://github.com/alex-png/findmybeer-frontend">Github Frontend</a> |
+                <a href="https://github.com/alex-png/findmybeer-backend">Github Backend</a>
                 </p>
             </div>
     </div>`
@@ -67,6 +70,9 @@ const mfModal = `
             <p style="font-size: large; padding-bottom: 1em;">Welcome to Mobflix! The goal of this solo project was to familiarize myself with CSS and design, both having been completely foreign to me. 
             I aimed to mimic Netflix's user interface, with my own spin. 
             In lieu of time constraints, I employed AJAX polling in place of web-sockets for the comment section.            
+            <br />
+            <a href="https://github.com/alex-png/mobflix-frontend">Github Frontend</a> | 
+            <a href="https://github.com/alex-png/mobflix--api">Github Backend</a>
             </p>
         </div>
 </div>`
@@ -85,8 +91,9 @@ const ncdModal = `
         <div name="text">
             <p style="font-size: large; padding-bottom: 1em;"> 
             Welcome to Nil Class Destroyer! Clear my classmates from the board in this exciting bubble shooter game!
-This was the third project I worked on in The Flatiron School. Working alongside two classmates, this project was meant to hone our newly-learned Javascript skills.
-
+            This was the third project I worked on in The Flatiron School. Working alongside two classmates, this project was meant to hone our newly-learned Javascript skills.
+            <br />
+            <a href="https://github.com/TheEugeniaKim/nil_class_destroyer_front_end">Github Frontend</a>
             </p>
         </div>
 </div>`
