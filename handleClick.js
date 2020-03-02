@@ -112,6 +112,8 @@ function modalClick() {
     } else if (typeof event.target.dataset.arrayPosition === "string") {
         indx = parseInt(event.target.dataset.arrayPosition, 10)
         nav.insertAdjacentHTML("beforeend", arr[indx])
+    }else{
+        console.log("HELLO!")
     }
 }
 
