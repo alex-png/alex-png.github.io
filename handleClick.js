@@ -91,29 +91,31 @@ function handleClick() {
 }
 
 
-function modalClick() {
+function modalClick(){
     const modal = document.querySelector("#modal")
     if (event.target.className === "modal" || event.target.className === "close") {
         modal.remove()
-
-    } else if (event.target.id === "left" || event.target.id === "right") {
-        if (event.target.id === "right") {
-            console.log("before addition", indx)
-            if (indx < (arr.length - 1)) {
-                indx += 1
-                modal.innerHTML = arr[indx]
-            }
-        } else if (event.target.id === "left") {
-            if (indx > 0) {
-                indx -= 1
-                modal.innerHTML = arr[indx]
-            }
-        }
-    } else if (typeof event.target.dataset.arrayPosition === "string") {
-        indx = parseInt(event.target.dataset.arrayPosition, 10)
-        nav.insertAdjacentHTML("beforeend", arr[indx])
-    }else{
-        console.log("HELLO!")
+    } else if (event.target.id === "right" && indx != arr.length - 1) {
+        event.stopPropagation()
+        indx += 1
+        console.log(indx)
+        modal.innerHTML = arr[indx]
+    } else if(event.target.id === "right" && indx === arr.length -1){
+        event.stopPropagation()
+        indx = 0
+        modal.innerHTML = arr[indx]
+    } else if(event.target.id === "left" && indx != 0){
+        event.stopPropagation()
+        indx -= 1
+        console.log(indx)
+        modal.innerHTML = arr[indx]
+    } else if(event.target.id === "left" && indx === 0){
+        event.stopPropagation()
+        indx = (arr.length -1)
+        modal.innerHTML = arr[indx]
+    }else if (typeof event.target.dataset.arrayPosition === "string") {
+            indx = parseInt(event.target.dataset.arrayPosition, 10)
+            nav.insertAdjacentHTML("beforeend", arr[indx])
     }
 }
 
