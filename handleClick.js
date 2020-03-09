@@ -72,7 +72,7 @@ const ncdModal = `
     </div>
 </div>`
 
-const about = document.getElementById("About")
+const about = document.getElementById("about")
 const projects = document.getElementById("projects-section")
 const contact = document.getElementById("Contact")
 const nav = document.getElementsByClassName("nav")[0]
@@ -81,12 +81,13 @@ let indx
 
 function handleClick() {
     if (event.target.title === "Learn") {
-        console.log(nav.offsetHeight)
         nav.scrollIntoView({ behavior: "smooth", block: "start" })
-    } else if (event.target.name === "About") {
-        about.scrollIntoView({ behavior: "smooth" })
+    } else if (event.target.name === "about") {
+        about.scrollIntoView({ behavior: "smooth", block: "start" })
     } else if (event.target.name === "projects-section") {
         projects.scrollIntoView({ behavior: "smooth", block: "start" })
+    }else if(event.target.name = "contact"){
+        contact.scrollIntoView({ behavior: "smooth", block: "start" })
     }
 }
 
@@ -119,6 +120,12 @@ function modalClick(){
     }
 }
 
+function copy() {
+    // debugger
+    let input = document.getElementById('email').innerText
+    input.select()
+    document.execCommand('copy')
+}
 
 
 
