@@ -220,6 +220,7 @@ body{
     justify-content: center;
     text-align: center;
     overflow: scroll;
+    width: -webkit-fill-available;
   }
 .video-btn{
   border: solid;

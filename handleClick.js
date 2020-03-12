@@ -118,12 +118,6 @@ function modalClick() {
     }
 }
 
-function copy() {
-    // debugger
-    let input = document.getElementById('email').innerText
-    input.select()
-    document.execCommand('copy')
-}
 
 
 

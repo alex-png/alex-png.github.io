@@ -1,30 +1,50 @@
 
-const terra = `
-<div id="modal" class="modal" onClick="modalClick()">
-        <span class="close" "onClick="modalClick()"> X </span>
-        <h1>FindMyBeer</h1>
-        <span id="left"  class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; left: .5em;"><</span>
+const cocModal = `
+        <span class="close" "onClick="artClick()"> X </span>
+        <span id="left" class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; left: .5em;"><</span>
         <span id="right" class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; right: .5em;">></span>
-        <div class="videoWrapper">
-            <iframe src="https://www.youtube.com/embed/ABAshHF-Z70" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-        </div>
-        <div name="text">
-            <p style="font-size: large; padding-bottom: 1em;">Welcome to FindMyBeer! This is the first phase of my fifth and final project at The Flatiron School. This app
-            aims to provide users with beers that they are likely to enjoy based on initial input and further data
-            collection. With each "interested" or "not interested" click, data is parsed in the back end, and once
-            enough
-            clicks are reached, a new group of recommended beers are sent to the front end.
+        <img style="max-height: 50%;" src="public/creature_of_consumption.png" />
+        <h1>Creature of Consumption</h1>`
+const terrModal = `
+        <span class="close" "onClick="artClick()"> X </span>
+        <span id="left" class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; left: .5em;"><</span>
+        <span id="right" class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; right: .5em;">></span>
+        <img style="max-height: 35%;" src="public/terra.png" />
+        <h1>Terra</h1>`
 
-            The following phase will involve making the site more social; with the ability to make friends, events, and
-            so
-            forth.
+const artArr = [cocModal, terrModal]
 
-            The final phase will be entirely dedicated to design.
-            <br />
-            <a href="https://github.com/alex-png/findmybeer-frontend">Github Frontend</a> |
-            <a href="https://github.com/alex-png/findmybeer-backend">Github Backend</a>
-            </p>
-        </div>
-</div>`
+function artModal(innerHtml){
+    return `<div id="modal" class="modal" style= height: 100%; display: table;" onclick="artClick()">${innerHtml}</div>`
+}
+
+function artClick() {
+    // debugger
+    if (event.target.className === "modal" || event.target.className === "close") {
+        document.querySelector('#modal').remove()
+    } else if (event.target.id === "right" && artIndx != artArr.length - 1) {
+        event.stopPropagation()
+        artIndx += 1
+        document.querySelector('#modal').innerHTML = artArr[artIndx]
+    } else if (event.target.id === "right" && artIndx === artArr.length - 1) {
+        event.stopPropagation()
+     artIndx = 0
+        document.querySelector('#modal').innerHTML = artArr[artIndx]
+    } else if (event.target.id === "left" && artIndx != 0) {
+        event.stopPropagation()
+     artIndx -= 1
+        document.querySelector('#modal').innerHTML = artArr[artIndx]
+    } else if (event.target.id === "left" && artIndx === 0) {
+        event.stopPropagation()
+     artIndx = (artArr.length - 1)
+        document.querySelector('#modal').innerHTML = artArr[artIndx]
+    } else if (typeof event.target.dataset.arrayPosition === "string") {
+     artIndx = parseInt(event.target.dataset.arrayPosition, 10)
+        event.stopPropagation()
+        nav.insertAdjacentHTML("beforeend", artArr[artIndx])
+    } else if (event.target.className === "about-href") {
+        artIndx = 0
+        let modal = artModal(artArr[artIndx])
+        nav.insertAdjacentHTML("beforeend", modal)        
+    }
+}
