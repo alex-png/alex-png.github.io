@@ -36,7 +36,7 @@ body{
 
 #landing{
   background: url(./public/portfolio_banner.png);
-  background-size: cover;
+  background-size: contain;
   display: flex;
   align-items: flex-end;
   justify-content: center;
