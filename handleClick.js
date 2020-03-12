@@ -86,37 +86,35 @@ function handleClick() {
         about.scrollIntoView({ behavior: "smooth", block: "start" })
     } else if (event.target.name === "projects-section") {
         projects.scrollIntoView({ behavior: "smooth", block: "start" })
-    }else if(event.target.name = "contact"){
+    } else if (event.target.name = "contact") {
         contact.scrollIntoView({ behavior: "smooth", block: "start" })
     }
 }
 
 
-function modalClick(){
+function modalClick() {
     const modal = document.querySelector("#modal")
     if (event.target.className === "modal" || event.target.className === "close") {
         modal.remove()
     } else if (event.target.id === "right" && indx != arr.length - 1) {
         event.stopPropagation()
         indx += 1
-        console.log(indx)
         modal.innerHTML = arr[indx]
-    } else if(event.target.id === "right" && indx === arr.length -1){
+    } else if (event.target.id === "right" && indx === arr.length - 1) {
         event.stopPropagation()
         indx = 0
         modal.innerHTML = arr[indx]
-    } else if(event.target.id === "left" && indx != 0){
+    } else if (event.target.id === "left" && indx != 0) {
         event.stopPropagation()
         indx -= 1
-        console.log(indx)
         modal.innerHTML = arr[indx]
-    } else if(event.target.id === "left" && indx === 0){
+    } else if (event.target.id === "left" && indx === 0) {
         event.stopPropagation()
-        indx = (arr.length -1)
+        indx = (arr.length - 1)
         modal.innerHTML = arr[indx]
-    }else if (typeof event.target.dataset.arrayPosition === "string") {
-            indx = parseInt(event.target.dataset.arrayPosition, 10)
-            nav.insertAdjacentHTML("beforeend", arr[indx])
+    } else if (typeof event.target.dataset.arrayPosition === "string") {
+        indx = parseInt(event.target.dataset.arrayPosition, 10)
+        nav.insertAdjacentHTML("beforeend", arr[indx])
     }
 }
 
