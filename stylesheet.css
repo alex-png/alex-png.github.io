@@ -9,12 +9,6 @@ body{
   color: white;
   overscroll-behavior-y: none;
   overscroll-behavior-x: none;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently  supported by Chrome, Opera and Firefox */  
   font-family: 'Turret Road';
 }
 .nav{
@@ -32,7 +26,12 @@ body{
   font-family: 'Turret Road';
   font-weight: bolder;
   z-index: 2;
-
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently  supported by Chrome, Opera and Firefox */  
 }
 
 #landing{
@@ -43,6 +42,12 @@ body{
   justify-content: center;
   height: 100vh;
   background-color: #010014;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently  supported by Chrome, Opera and Firefox */  
 
 }
   
@@ -115,10 +120,17 @@ body{
     font-family: 'Turret Road';font-size: x-large;
     padding-right: .5em;
     padding-left: .5em;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently  supported by Chrome, Opera and Firefox */  
   }
 
   .stack{
     margin: 2em;
+    
   }
 
   .stack-logo{
@@ -137,6 +149,12 @@ body{
     height: 100vh;
     text-align: center;
     background-color: rgba(1, 0, 20, 0.95);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently  supported by Chrome, Opera and Firefox */    
   }
   
   .about-href{
@@ -147,9 +165,14 @@ body{
     /* background-color: rgba(18, 18, 26, 0.95); */
     background-color: rgb(2, 2, 10);
     text-align: center;
-    height: 100vh;
     padding: 1em;
-    overflow: scroll;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently  supported by Chrome, Opera and Firefox */  
+  
   }
   .contact-section{
     background-color: rgba(1, 0, 20, 0.95);
@@ -160,11 +183,29 @@ body{
     overflow-wrap: break-word;
     padding-top: 4em;
     }
+    .contact-section-noselect{
+      background-color: rgba(1, 0, 20, 0.95);
+      text-align: center;
+      height: 100vh;
+      padding: 1em;
+      overflow: hidden;
+      overflow-wrap: break-word;
+      padding-top: 4em;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently  supported by Chrome, Opera and Firefox */  
+  
+      
+    }
   #video-stack{ 
     padding: 1.5em;
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 18em;
   }
 
 .container {

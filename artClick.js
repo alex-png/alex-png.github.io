@@ -3,13 +3,13 @@ const cocModal = `
         <span class="close" "onClick="artClick()"> X </span>
         <span id="left" class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; left: .5em;"><</span>
         <span id="right" class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; right: .5em;">></span>
-        <img style="max-height: 50%;" src="public/creature_of_consumption.png" />
+        <img style="max-height: 60%;" src="public/creature_of_consumption.png" />
         <h1>Creature of Consumption</h1>`
 const terrModal = `
         <span class="close" "onClick="artClick()"> X </span>
         <span id="left" class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; left: .5em;"><</span>
         <span id="right" class="slide-arrow" style="font-size: xx-large;position:absolute; top: 8em; right: .5em;">></span>
-        <img style="max-height: 35%;" src="public/terra.png" />
+        <img style="max-height: 45%;" src="public/terra.png" />
         <h1>Terra</h1>`
 
 const artArr = [cocModal, terrModal]
