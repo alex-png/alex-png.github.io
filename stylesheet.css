@@ -360,3 +360,14 @@ body{
   user-select: none; /* Non-prefixed version, currently  supported by Chrome, Opera and Firefox */  
 
 }
+
+.nav-link{
+  font-family: 'Turret Road';
+  font-weight: bolder;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  color: #fe25ab;
+}
