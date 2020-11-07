@@ -1,0 +1,237 @@
+/* 
+Z-Index index (pun intended):
+nav: 3
+sideNav: 4
+
+*/
+html {
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#about-page {
+  padding-top: 25vh;
+  margin: 5em;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  background: rgb(47 43 51);
+  text-align: center;
+  font-family: "Turret Road";
+}
+.page {
+  background: rgb(47 43 51);
+  color: blanchedalmond;
+  font-size: x-large;
+  min-height: 100vh;
+  margin: 1em;
+  padding-top: 6.5vh;
+}
+
+input {
+  margin-bottom: 1em;
+}
+
+.body-p {
+  margin-top: 6.5vh;
+}
+
+.portfolio-p {
+  font-size: large;
+  margin-top: 1em;
+  padding: 0;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  backdrop-filter: blur(4px);
+}
+
+/* landing page stuff */
+.blinking {
+  animation: blinkingText 1s infinite;
+  font-weight: 900;
+  font-size: xx-large;
+}
+@keyframes blinkingText {
+  0% {
+    color: blanchedalmond;
+  }
+  49% {
+    color: blanchedalmond;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: blanchedalmond;
+  }
+}
+
+#landing-page {
+  background-color: rgb(47 43 51);
+  color: blanchedalmond;
+  overflow: hidden;
+  font-size: xx-large;
+  min-height: 100vh;
+}
+#landing-img {
+  max-height: 60vh;
+}
+
+#nav {
+  display: none;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background: #45bdc3;
+  padding: 0;
+  transition: 0.3s;
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 6vh;
+}
+
+.sideNavBar-section {
+  margin-bottom: 5vh;
+  background-color: none;
+  min-height: 4vh;
+}
+
+img{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.nav-img {
+  max-width: 90%;
+}
+
+#dynamic-role {
+  color: aquamarine;
+}
+
+/* ********************DESKTOP PORTFOLIO stuff below**************************** */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+}
+
+.portfolio-item {
+  margin: 1vw;
+}
+
+.portfolio-img {
+  max-width: 100%;
+  margin: 1em;
+}
+/* ********************MOBILE stuff below**************************** */
+
+#landing-page-mobile {
+  display: none;
+}
+#landing-page-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#landing-img-desktop {
+  margin: 1em;
+  max-height: 90vh;
+  min-width: 30vw;
+  margin-top: 1em;
+}
+
+@media (max-width: 720px) {
+  #landing-page {
+    background-color: rgb(47 43 51);
+    color: blanchedalmond;
+    overflow: hidden;
+    font-size: xx-large;
+    min-height: 100vh;
+  }
+  #landing-img {
+    max-height: 60vh;
+  }
+  #landing-page-desktop {
+    display: none;
+  }
+  #landing-page-mobile {
+    display: block;
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+    margin: 2%;
+  }
+  .portfolio-actual {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    margin: 2%;
+  }
+
+  .portfolio-item {
+    margin: 1%;
+    text-align: center;
+    font-size: xxx-large;
+  }
+
+  .portfolio-img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .form {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  #about-page {
+    margin: 1em;
+    padding-top: 3vh;
+  }
+  /* 
+Nav Stuff
+*/
+  #nav {
+    background-color: #262333;
+    position: fixed;
+    z-index: 3;
+    height: 6vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}

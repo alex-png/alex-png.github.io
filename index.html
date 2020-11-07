@@ -1,129 +1,220 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html>
-<!--<![endif]-->
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<link
+				href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap"
+				rel="stylesheet"
+			/>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<title></title>
+			<meta name="description" content="" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<link rel="stylesheet" href="./main.css" />
+		</head>
+		<body onload="runMobileOrDesktop()" >
+			<nav id="nav">
+				<div id="burger" class="hamburger">
+					<img
+						src="./public/circled-menu.png"
+						style="height: -webkit-fill-available"
+					/>
+				</div>
+			</nav>
+			<div id="sideNavBar" class="sidenav">
+				<a href="#landing-page">
+					<div id="home" class="sideNavBar-section">
+						<img id="home" src="public/mansion.svg" class="nav-img"/> 
+					</div>
+				</a>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Alex Rodriguez</title>
-    <meta name="Beta Port" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+				<a href="#about-page">
+					<div id="about" class="sideNavBar-section">
+						<img id="about" src="public/creative.svg" class="nav-img"/> 
+					</div>
+				</a>
+				<a href="#portfolio-page">
+					<div id="portfolio" class="sideNavBar-section">
+						<img id="portfolio" src="public/double-screen.svg" class="nav-img"/> 
+					</div>
+				</a>
+				<a href="#contact-page">
+					<div id="contact" class="sideNavBar-section">
+						<img id="contact" src="public/email.svg" class="nav-img"/> 
+					</div>
+				</a>
+			</div>
 
-    <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
-    <script type="text/javascript" src="./handleClick.js" defer></script>
-    <script type="text/javascript" src="./artClick.js" defer></script>
-    <script type="text/javascript" src="./copyClick.js" defer></script>
-</head>
+			<div id="landing-page">
 
-<body>
-    <div id="landing">
-        <span title="Learn" class="arrowbtn arrowbtn-down" onclick="handleClick()"></span>
-    </div>
-    <nav class="nav">
-        <ul style="display: contents;">
-            <a class="nav-link" name="about" style="cursor: pointer;" onclick="handleClick()">ABOUT</a>
-            <a class="nav-link" name="projects-section" style="cursor: pointer;" onclick="handleClick()">PROJECTS</a>
-            <a class="nav-link" name="contact" style="cursor: pointer;" onclick="handleClick()">CONTACT</a>
-            <a class="nav-link" href="Alex Rodriguez-Resume.pdf" target="_blank">RESUME</a>
-        </ul>
-    </nav>
+				<div id="landing-page-mobile" onload="runMobileOrDesktop()">
+					<p style="text-align: center" class="body-p">
+						Hello! My name is <span style="color: #52dbe2;">Alex Rodriguez</span> 
+					</p>
+					<img id="landing-img" src="public\avatar.svg" />
+					<br />
+					<p style="text-align: center; color:aquamarine;">
+						I am a... <span id="mobile-dynamic-role"></span> <span class="blinking">|</span>
+					</p>
+				</div>
 
-    <div id="about">
-        <div style="display: table-cell;
-        vertical-align: middle;">
-            <p class="roboto">
-                Hello, World! I'm a creative full-stack software engineer passionate about developing practical and
-                efficient
-                applications. When I'm not coding, I'm either <a class="about-href" style="cursor: pointer;"
-                    onclick="artClick()">dabbling in art</a> or working on <a class="about-href"
-                    href="https://www.youtube.com/channel/UCY_5HDyUz8G_wI7vSuQSECQ" target="_blank">my podcast</a>.
-            </p>
+				<div id="landing-page-desktop" onload="runMobileOrDesktop()">
+						
+						<div>
+							<br/>
+							<p style="text-align: center">
+								Hello! My name is <span style="color: #52dbe2; font-size:xx-large">Alex Rodriguez</span>
+							</p>
+									
+							<p style="text-align: left; position: absolute;color:aquamarine;">
+								I am a <span id="desktop-dynamic-role"></span> <span class="blinking">|</span>
+							</p>
+						</div>
+						
+						<div>
+							<img id="landing-img-desktop" src="public\avatar.svg" />
+						</div>
+						
+		
+				
 
-            <div class="stack">
+			</div>
 
-                <img name="projects-section" class="stack-logo" src="public/js-logo.png" style="cursor:pointer;"
-                    onclick="handleClick()" />
-                <img name="projects-section" class="stack-logo" src="public/react_logo.png" style="cursor:pointer;"
-                    onclick="handleClick()" />
-                <img name="projects-section" class="stack-logo" src="public/ruby.png" style="cursor:pointer;"
-                    onclick="handleClick()" />
-                <img name="projects-section" class="stack-logo" src="public/Ruby_On_Rails_Logo.svg.png"
-                    style="cursor:pointer;" onclick="handleClick()" />
-                <img name="projects-section" class="stack-logo" src="public/css3.png" style="cursor:pointer;"
-                    onclick="handleClick()" />
-                <img name="projects-section" class="stack-logo" src="public/html5.png" style="cursor:pointer;"
-                    onclick="handleClick()" />
-                <img name="projects-section" class="stack-logo" src="public/photoshop.png" style="cursor:pointer;"
-                    onclick="handleClick()" />
-            </div>
+	<!--
+		<div>
+				<p class="body-p">Get in touch with me!</p>
+				<form
+					id="fs-frm"
+					name="simple-contact-form"
+					accept-charset="utf-8"
+					action="https://formspree.io/f/alexrod102797@gmail.com"
+					method="post"
+				>
+					<div class="form">
+						<label for="full-name">Full Name</label>
+						<input
+							type="text"
+							name="name"
+							id="full-name"
+							placeholder="First and Last"
+							required=""
+						/>
+						<label for="email-address">Email Address</label>
+						<input
+							type="email"
+							name="_replyto"
+							id="email-address"
+							placeholder="email@domain.com"
+							required=""
+						/>
+						<label for="message">Message</label>
+						<textarea
+							rows="5"
+							name="message"
+							id="message"
+							placeholder="Hello Alex,"
+							required=""
+						></textarea>
+						<input
+							type="hidden"
+							name="_subject"
+							id="email-subject"
+							value="Contact Form Submission"
+						/>
+					</div>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+				
+			<div class="page" id="about-page">
+				<p >
+					Hello, World! I am a creative full-stack engineer passionate about
+					developing practical and efficient applications.
+				</p>
+				<div class="portfolio">
+					<div class="portfolio-item">
+						<img
+							src="./public/SFU_CRT_BDG_Pltfrm_Dev_I_RGB.jpg"
+							class="portfolio-img"
+						/>
+					</div>
 
-            <p class="roboto">
-                I'm proficient in Javascript, React.js, Ruby, Ruby on Rails, CSS3, HTML5, and Adobe Photoshop.
-            </p>
-            <br />
-        </div>
-    </div>
+					<div class="portfolio-item">
+						<img src="./public/SFU_CRT_BDG_Admin_RGB.jpg" class="portfolio-img" />
+					</div>
 
-    <div class="projects-section" id="projects-section">
-        <h1 style="padding-top: 5vh;">Projects</h1>
-        <br />
+					<div class="portfolio-item">
+						<img src="./public/js-logo.png" class="portfolio-img" />
+					</div>
 
-        <div data-array-position="0" id="video-stack">
-            <div data-array-position="0" id="FindMyBeer" class="container" onclick="modalClick()">
-                <img data-array-position="0" id="FindMyBeer" src="public/findmybeerimg.png" alt="Avatar" class="image"
-                    style="width:100%">
-                <div data-array-position="0" id="FindMyBeer" class="middle">
-                    <h1 data-array-position="0" id="FindMyBeer">FindMyBeer</h1>
-                    <p data-array-position="0" id="FindMyBeer">Discover beers tailored to your unique preferences!</p>
-                    <p data-array-position="0" id="FindMyBeer" class="video-btn">Learn More</p>
-                </div>
-            </div>
+					<div class="portfolio-item">
+						<img src="./public/react_logo.png" class="portfolio-img" />
+					</div>
 
-            <div data-array-position="1" class="container" onclick="modalClick()" id="Mobflix">
-                <img data-array-position="1" src="public/mobfliximg.png" alt="Avatar" class="image" style="width:100%"
-                    id="Mobflix">
-                <div data-array-position="1" class="middle" id="Mobflix">
-                    <h1 data-array-position="1" id="Mobflix">Mobflix</h1>
-                    <p data-array-position="1" id="Mobflix">A Netflix emulator using movie clips from Youtube.</p>
-                    <p data-array-position="1" class="video-btn" id="Mobflix">Learn More</p>
-                </div>
-            </div>
+					<div class="portfolio-item">
+						<img src="./public/ruby.png" class="portfolio-img" />
+					</div>
 
-            <div data-array-position="2" class="container" onclick="modalClick()">
-                <img data-array-position="2" id="NilClass" src="public/nilclassdestroyerimg.png" alt="Avatar"
-                    class="image" style="width:100%">
-                <div data-array-position="2" id="NilClass" class="middle">
-                    <h1 data-array-position="2" id="NilClass">NilClass Destroyer</h1>
-                    <p data-array-position="2" id="NilClass">Destroy students of NilClass in this bubble shooter game!
-                    </p>
-                    <p data-array-position="2" id="NilClass" class="video-btn">Learn More</p>
-                </div>
-            </div>
+					<div class="portfolio-item">
+						<img
+							src="./public/Ruby_On_Rails_Logo.svg.png"
+							class="portfolio-img"
+						/>
+					</div>
 
-        </div>
-    </div>
+					<div class="portfolio-item">
+						<img src="./public/html5.png" class="portfolio-img" />
+					</div>
 
-    <div id="Contact" class="contact-section">
-        <div>
-            <h1 class="roboto" style="font-size: xx-large;">Contact</h1>
-            <p class="roboto">Email:</p> <span class="about-href"
-                style="font-size: x-large;">alexrod102797@gmail.com</span>
-            <p class="roboto">Github:</p> <a class="about-href" style="font-size: x-large;"
-                href="https://github.com/alex-png" target="_blank">github.com/alex-png</a>
-            <p class="roboto">LinkedIn:</p> <a class="about-href" style="font-size: x-large;"
-                href="https://www.linkedin.com/in/alexrodriguez97/" target="_blank">linkedin.com/in/alexrodriguez97 </a>
-        </div>
-    </div>
-</body>
+					<div class="portfolio-item">
+						<img src="./public/css3.png" class="portfolio-img" />
+					</div>
 
-</html>
+					<div class="portfolio-item">
+						<img src="./public/photoshop.png" class="portfolio-img" />
+					</div>
+				</div>
+				<p>
+					I am 2x Salesforce certified and proficient in Apex, Visualforce, Aura,
+					SOQL, SOSL, Javascript, React.js, Ruby, Ruby on Rails, CSS, HTML and
+					Adobe Photoshop.
+				</p>
+			</div>
+
+			<div class="page" id="portfolio-page">
+				<p>Projects</p>
+
+				<div class="portfolio-actual">
+
+					<div class="portfolio-item">
+						<img src="./public/findmybeerimg.png" class="portfolio-img" id="findmybeer"/>
+						<p class="portfolio-p">Discover unique beers tailored to your preference!</p>  
+					</div>
+					<div class="portfolio-item">
+						<img src="./public/mobfliximg.png" class="portfolio-img" id="mobflix">
+						<p class="portfolio-p">A Netflix emulator using clips from Youtube.</p>  
+
+						
+					</div>
+
+					<div class="portfolio-item">
+						<img src="./public/nilclassdestroyerimg.png" class="portfolio-img" id="nilclassdestroyer">
+						<p class="portfolio-p">Destroy students of NilClass in this bubble shooter game!</p>  
+
+					</div>
+
+				</div>
+
+			</div>
+			<div style="margin-top: 20%;">
+					<img style="max-width: 30%; margin:.5em;" src="./public/linkedin.svg" onclick="console.log('LINKEDIN')"/>
+					<img style="max-width: 30%; margin:.5em;" src="./public/github.svg" onclick="console.log('GIT')"/>
+				</div>
+				</div>
+			
+	-->	
+
+		</body>
+		<script src="./utility.js" defer></script>
+		<script src="./index.js" defer></script>
+	</html>
