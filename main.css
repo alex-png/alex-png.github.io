@@ -20,12 +20,12 @@ html {
 body {
   margin: 0;
   font-family: monospace;
-  background: rgb(47 43 51);
+  background: rgb(30 28 31);
   text-align: center;
   font-family: "Turret Road";
 }
 .page {
-  background: rgb(47 43 51);
+  background: rgb(30 28 31);
   color: blanchedalmond;
   font-size: x-large;
   min-height: 100vh;
@@ -86,7 +86,7 @@ input {
 }
 
 #landing-page {
-  background-color: rgb(47 43 51);
+  background-color: rgb(30 28 31);
   color: blanchedalmond;
   overflow: hidden;
   font-size: xx-large;
@@ -170,7 +170,7 @@ img{
 
 @media (max-width: 720px) {
   #landing-page {
-    background-color: rgb(47 43 51);
+    background-color: rgb(30 28 31);
     color: blanchedalmond;
     overflow: hidden;
     font-size: xx-large;
