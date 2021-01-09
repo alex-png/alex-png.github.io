@@ -168,6 +168,14 @@ img{
   margin-top: 1em;
 }
 
+.pop-up-box{
+  background-color: red;
+  border: solid;
+  border-color: blue;
+  height: 45vh;
+  margin-top: 15vh;
+}
+
 @media (max-width: 720px) {
   #landing-page {
     background-color: rgb(30 28 31);

@@ -48,7 +48,6 @@
 			</div>
 		-->
 			<div id="landing-page">
-
 				<div id="landing-page-mobile" onload="runMobileOrDesktop()">
 					<p style="text-align: center">
 						Hello! My name is <span style="color: #52dbe2;">Alex Rodriguez</span> 
@@ -61,25 +60,43 @@
 				</div>
 
 				<div id="landing-page-desktop" onload="runMobileOrDesktop()">
-						
 						<div>
 							<br/>
-							<p style="text-align: center">
-								Hello! My name is <span style="color: #52dbe2; font-size:xx-large">Alex Rodriguez</span>
-							</p>
-									
-							<p style="text-align: left; position: absolute;color:aquamarine;">
-								I am a <span id="desktop-dynamic-role"></span> <span class="blinking">|</span>
-							</p>
+							<div>
+								<p style="text-align: center">
+									Hello! My name is <span style="color: #52dbe2; font-size:xx-large">Alex Rodriguez</span>
+								</p>
+										
+								<div>
+									<p style="text-align: left;color:aquamarine;">
+										I am a <span id="desktop-dynamic-role"></span> <span class="blinking">|</span>
+									</p>
+								</div>
+								<div style="padding-top: 1vh;">
+									<p style="text-align: left;color:aquamarine;cursor:pointer" onclick="console.log('ABOUT PAGE')">
+										> about
+									</p>
+									<p style="text-align: left;color:aquamarine;cursor:pointer" onclick="console.log('PORTFOLIO')" >
+										> portfolio
+									</p>
+									<p style="text-align: left;color:aquamarine;cursor:pointer" onclick="console.log('CONTACT')">
+										> contact
+									</p>
+								</div>	
+								
+							</div>
+							
 						</div>
 						
 						<div>
 							<img id="landing-img-desktop" src="public\avatar.svg" />
 						</div>
+					
 						
-		
-				
 
+
+				</div>
+				
 			</div>
 
 	<!--

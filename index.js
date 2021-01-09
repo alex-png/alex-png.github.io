@@ -56,7 +56,7 @@ function runMobileOrDesktop() {
 }
 
 window.addEventListener("resize", runMobileOrDesktop);
-
+/*
 burger.addEventListener("click", function () {
   sideNavBarOpen = !sideNavBarOpen; //
   extendOrCollapseWidth(sideNavBarOpen, sideNavBar);
@@ -103,3 +103,4 @@ portfolio.addEventListener("click", function () {
     );
   }
 });
+*/
