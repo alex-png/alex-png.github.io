@@ -1,16 +1,20 @@
 const burger = document.getElementById("burger"); //menu icon on navbar
 const sideNavBar = document.getElementById("sideNavBar");
 
-
+let navItems = document.getElementById('nav-items');
 let sideNavBarOpen = false;
 let clickedSection = "";
 let modal = document.getElementById("myModal");
 let portfolio = document.getElementById("portfolio-page");
+
 const roles = ["developer", "freelancer", "problem solver"];
+const aboutText = "full stack software developer passionate about building practical and efficient applications. \n\n I am 2x Salesforce certified and experienced in Apex, SOQL, Visualforce, Aura, and React.js. ";
+
 
 let currentWidthOutput;
 let typingAnimatedRunning = false;
 let previousWidthOutput;
+
 
 function runMobileOrDesktop() {
   currentWidthOutput = window.innerWidth;
@@ -56,6 +60,29 @@ function runMobileOrDesktop() {
 }
 
 window.addEventListener("resize", runMobileOrDesktop);
+
+function handleClick(){
+  let roleTextDeskTop = document.getElementById("desktop-dynamic-role"); //this is the changing role following "i am a..."
+  let navLink = event.target.id;
+  
+  if(navLink === 'about-link'){
+    roleTextDeskTop.remove();
+    let aboutSpan = document.createElement('aboutSpan');
+    navItems.remove();  
+    blinker.insertAdjacentElement("beforebegin", aboutSpan)
+    textType(aboutSpan, aboutText);
+  }
+  
+
+};
+
+
+
+
+
+
+
+
 /*
 burger.addEventListener("click", function () {
   sideNavBarOpen = !sideNavBarOpen; //

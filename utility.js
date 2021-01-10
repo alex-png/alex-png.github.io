@@ -54,7 +54,17 @@ function animatedText(domElement, arr){
 
     typingAnimated();
 
-    }
+}
+
+async function textType(domElement, text){
+    
+    for(let i = 0; i < text.length; i++){
+        domElement.innerText += text[i];
+        await timer(30); 
+     }
+    
+}
+
 
 function switchOnModal(modal){
     modal.style.display = 'block';
