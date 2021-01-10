@@ -62,7 +62,10 @@ async function textType(domElement, text){
         domElement.innerText += text[i];
         await timer(30); 
      }
-    
+     
+    let res = {'message':'success'};
+    JSON.stringify(res);
+    return res;
 }
 
 

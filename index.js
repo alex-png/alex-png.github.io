@@ -8,7 +8,7 @@ let modal = document.getElementById("myModal");
 let portfolio = document.getElementById("portfolio-page");
 
 const roles = ["developer", "freelancer", "problem solver"];
-const aboutText = "full stack software developer passionate about building practical and efficient applications. \n\n I am 2x Salesforce certified and experienced in Apex, SOQL, Visualforce, Aura, and React.js. ";
+const aboutText = "full stack software developer passionate about building practical and efficient applications. \n\n I am 2x Salesforce certified and experienced in Apex, SOQL, Visualforce, Aura, and React.js \n\n\n_home _portfolio _contact ";
 
 
 let currentWidthOutput;
@@ -66,11 +66,14 @@ function handleClick(){
   let navLink = event.target.id;
   
   if(navLink === 'about-link'){
+    blinker.innerText = ' |'
     roleTextDeskTop.remove();
     let aboutSpan = document.createElement('aboutSpan');
-    navItems.remove();  
+    navItems.innerHTML = ''
     blinker.insertAdjacentElement("beforebegin", aboutSpan)
-    textType(aboutSpan, aboutText);
+    textType(aboutSpan, aboutText)
+      .then(res => res.json)
+      .then(data => console.log(data));  
   }
   
 
