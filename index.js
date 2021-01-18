@@ -62,6 +62,7 @@ function runMobileOrDesktop() {
 window.addEventListener("resize", runMobileOrDesktop);
 
 function handleClick(){
+  
   let roleTextDeskTop = document.getElementById("desktop-dynamic-role"); //this is the changing role following "i am a..."
   let navLink = event.target.id;
   
@@ -77,38 +78,26 @@ function handleClick(){
       let aboutTextEl = document.getElementById('about-text');
       aboutTextEl.innerText = aboutTextEl.innerText.slice(0,189);
       let navStuff = document.createElement('div') 
-      navStuff.innerHTML = `<span id='about-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
+      navStuff.style = "padding: 0;margin: 0;"; 
+      navStuff.innerHTML = `<span id='home-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
         _home
-      </sp>
+      </span>
       <span id='portfolio-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
         _portfolio
-      </sp>
+      </span>
       <span id='contact-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
         _contact
-      </sp>`;
-    blinker.insertAdjacentElement("beforebegin", navStuff);
-    
-
+      </span>`;
+      blinker.insertAdjacentElement("beforebegin", navStuff);
+      blinker.innerText = ''
     });
-
-
-      //figure out how to do below after the about-text has completed. 
-
-/*      let navStuff = document.createElement('div') 
-      navStuff.innerHTML = `<div id='nav-items' style="padding-top: 1vh;">
-      <span id='about-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
-        _about
-      </sp>
-      <span id='portfolio-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
-        _portfolio
-      </sp>
-      <span id='contact-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
-        _contact
-      </sp>
-    </div>`;
-    blinker.insertAdjacentElement("beforebegin", navStuff);
-*/
-    }
+  }else if(navLink == 'home-link'){
+    console.log('HOME');
+  }else if(navLink == 'portfolio-link'){
+    console.log('PORTFOLIO');
+  }else if(navLink == 'contact-link'){
+    console.log(navLink);
+  }
 
 };
 
