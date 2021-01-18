@@ -56,16 +56,14 @@ function animatedText(domElement, arr){
 
 }
 
-async function textType(domElement, text){
+async function textType(domElement, text, callBackFunc ){
     
     for(let i = 0; i < text.length; i++){
         domElement.innerText += text[i];
         await timer(30); 
      }
      
-    let res = {'message':'success'};
-    JSON.stringify(res);
-    return res;
+    callBackFunc();
 }
 
 

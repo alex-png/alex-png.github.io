@@ -68,14 +68,47 @@ function handleClick(){
   if(navLink === 'about-link'){
     blinker.innerText = ' |'
     roleTextDeskTop.remove();
-    let aboutSpan = document.createElement('aboutSpan');
+    let aboutSpan = document.createElement('span');
+    aboutSpan.id = 'about-text';
     navItems.innerHTML = ''
+
     blinker.insertAdjacentElement("beforebegin", aboutSpan)
-    textType(aboutSpan, aboutText)
-      .then(res => res.json)
-      .then(data => console.log(data));  
-  }
-  
+    textType(aboutSpan, aboutText, ()=>{
+      let aboutTextEl = document.getElementById('about-text');
+      aboutTextEl.innerText = aboutTextEl.innerText.slice(0,189);
+      let navStuff = document.createElement('div') 
+      navStuff.innerHTML = `<span id='about-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
+        _home
+      </sp>
+      <span id='portfolio-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
+        _portfolio
+      </sp>
+      <span id='contact-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
+        _contact
+      </sp>`;
+    blinker.insertAdjacentElement("beforebegin", navStuff);
+    
+
+    });
+
+
+      //figure out how to do below after the about-text has completed. 
+
+/*      let navStuff = document.createElement('div') 
+      navStuff.innerHTML = `<div id='nav-items' style="padding-top: 1vh;">
+      <span id='about-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
+        _about
+      </sp>
+      <span id='portfolio-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
+        _portfolio
+      </sp>
+      <span id='contact-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
+        _contact
+      </sp>
+    </div>`;
+    blinker.insertAdjacentElement("beforebegin", navStuff);
+*/
+    }
 
 };
 
