@@ -62,11 +62,10 @@ function runMobileOrDesktop() {
 window.addEventListener("resize", runMobileOrDesktop);
 
 function handleClick(){
-  
   let roleTextDeskTop = document.getElementById("desktop-dynamic-role"); //this is the changing role following "i am a..."
-  let navLink = event.target.id;
-  
-  if(navLink === 'about-link'){
+  let target = event.target.id;
+
+  if(target === 'about-link'){
     blinker.innerText = ' |'
     roleTextDeskTop.remove();
     let aboutSpan = document.createElement('span');
@@ -91,12 +90,14 @@ function handleClick(){
       blinker.insertAdjacentElement("beforebegin", navStuff);
       blinker.innerText = ''
     });
-  }else if(navLink == 'home-link'){
+  }else if(target == 'home-link'){
     console.log('HOME');
-  }else if(navLink == 'portfolio-link'){
+  }else if(target == 'portfolio-link'){
     console.log('PORTFOLIO');
-  }else if(navLink == 'contact-link'){
-    console.log(navLink);
+  }else if(target == 'contact-link'){
+    console.log(target);
+  }else if(target == 'linkedin'){
+    
   }
 
 };

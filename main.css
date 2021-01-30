@@ -160,6 +160,7 @@ img{
   flex-direction: row;
 }
 .social-media-img{
+  cursor: pointer;
   max-height: 100%;
   margin-left: 1em;
 }
