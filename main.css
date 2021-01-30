@@ -151,6 +151,19 @@ img{
   max-width: 100%;
   margin: 1em;
 }
+
+.social-media{
+  height: 7vh;
+  display: flex;
+  margin-left: 10vw;
+  margin-top: -10vh;
+  flex-direction: row;
+}
+.social-media-img{
+  max-height: 100%;
+  margin-left: 1em;
+}
+
 /* ********************MOBILE stuff below**************************** */
 
 #landing-page-mobile {
@@ -163,7 +176,7 @@ img{
 }
 #landing-img-desktop {
   margin: 1em;
-  max-height: 90vh;
+  max-height: 80vh;
   min-width: 30vw;
   margin-top: 1em;
 }
