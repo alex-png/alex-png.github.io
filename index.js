@@ -9,8 +9,16 @@ let portfolio = document.getElementById("portfolio-page");
 
 const roles = ["developer", "freelancer", "problem solver"];
 const aboutText = "full stack software developer passionate about building practical and efficient applications. \n\n I am 2x Salesforce certified and experienced in Apex, SOQL, Visualforce, Aura, and React.js \n\n\n_home _portfolio _contact ";
-
-
+const homeText = `<p style="text-align: left">
+Hello! My name is <span style="color: #52dbe2; font-size:xx-large">Alex Rodriguez</span>
+</p>
+  
+<div>
+<p style="text-align: left;color:aquamarine;max-width: fit-content;">
+  I am a <span id="desktop-dynamic-role">devel</span> <span id="blinker" class="blinking">|</span>
+</p>
+</div>
+`;
 let currentWidthOutput;
 let typingAnimatedRunning = false;
 let previousWidthOutput;
@@ -92,6 +100,9 @@ function handleClick(){
     });
   }else if(target == 'home-link'){
     console.log('HOME');
+    let landingPageHTML = document.getElementById('landing-text');
+    landingPageHTML.innerHTML = homeText;
+    runMobileOrDesktop()
   }else if(target == 'portfolio-link'){
     console.log('PORTFOLIO');
   }else if(target == 'contact-link'){
