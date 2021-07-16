@@ -8,7 +8,7 @@ let modal = document.getElementById("myModal");
 let portfolio = document.getElementById("portfolio-page");
 
 const roles = ["developer", "freelancer", "problem solver"];
-const aboutText = "full stack software developer passionate about building practical and efficient applications. \n\n I am 2x Salesforce certified and experienced in Apex, SOQL, Visualforce, Aura, and React.js \n\n\n_home _portfolio _contact ";
+const aboutText = "full stack software developer passionate about building practical and efficient applications. \n\n I am 2x Salesforce certified and experienced in Apex, SOQL, Visualforce, Aura, and React.js";
 
 
 let currentWidthOutput;
@@ -33,9 +33,11 @@ function runMobileOrDesktop() {
 
     } else if(typingAnimatedRunning == false) { 
       //is desktop and page just loaded
-      const roleTextDeskTop = document.getElementById("desktop-dynamic-role"); //changing role following "i am a..."
-      animatedText(roleTextDeskTop, roles);
+      //const roleTextDeskTop = document.getElementById("desktop-dynamic-role"); //changing role following "i am a..."
+      //animatedText(roleTextDeskTop, roles);
       typingAnimatedRunning = true;
+      aboutTextDeskTopLoad();
+
     }
     
   } else if(currentWidthOutput < 720) {
@@ -73,9 +75,11 @@ function handleClick(){
     navItems.innerHTML = ''
 
     blinker.insertAdjacentElement("beforebegin", aboutSpan)
+
     textType(aboutSpan, aboutText, ()=>{
       let aboutTextEl = document.getElementById('about-text');
       aboutTextEl.innerText = aboutTextEl.innerText.slice(0,189);
+     /*
       let navStuff = document.createElement('div') 
       navStuff.style = "padding: 0;margin: 0;"; 
       navStuff.innerHTML = `<span id='home-link' style="text-align: left;color:aquamarine;cursor:pointer" onclick="handleClick()" >
@@ -88,6 +92,7 @@ function handleClick(){
         _contact
       </span>`;
       blinker.insertAdjacentElement("beforebegin", navStuff);
+      */
       blinker.innerText = ''
     });
   }else if(target == 'home-link'){

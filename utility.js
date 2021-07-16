@@ -73,3 +73,23 @@ function switchOnModal(modal){
 function switchOffModal(modal){
     modal.style.display = 'none';
 }
+
+
+
+
+function aboutTextDeskTopLoad(){
+    let roleTextDeskTop = document.getElementById("desktop-dynamic-role"); //this is the changing role following "i am a..."
+    blinker.innerText = ' |'
+    roleTextDeskTop.remove();
+    let aboutSpan = document.createElement('span');
+    aboutSpan.id = 'about-text';
+    navItems.innerHTML = '';
+
+    blinker.insertAdjacentElement("beforebegin", aboutSpan)
+
+    textType(aboutSpan, aboutText, ()=>{
+      let aboutTextEl = document.getElementById('about-text');
+     
+      blinker.innerText = '';
+    });
+}
