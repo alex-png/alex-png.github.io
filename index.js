@@ -8,7 +8,7 @@ let modal = document.getElementById("myModal");
 let portfolio = document.getElementById("portfolio-page");
 
 const roles = ["developer", "freelancer", "problem solver"];
-const aboutText = "full stack software developer passionate about building practical and efficient applications. \n\n I am 2x Salesforce certified and experienced in Apex, SOQL, Visualforce, Aura, and React.js \n\n\n_home _portfolio _contact ";
+const aboutText = "full stack software developer passionate about building practical and efficient applications. \n\n I am 2x Salesforce certified and experienced in Apex, SOQL, Visualforce, Aura, and React.js"; // \n\n\n_home _portfolio _contact
 const homeText = `<p style="text-align: left">
 Hello! My name is <span style="color: #52dbe2; font-size:xx-large">Alex Rodriguez</span>
 </p>
@@ -102,69 +102,60 @@ function handleClick(){
     console.log('HOME');
     let landingPageHTML = document.getElementById('landing-text');
     landingPageHTML.innerHTML = homeText;
+    debugger;
     runMobileOrDesktop()
   }else if(target == 'portfolio-link'){
     console.log('PORTFOLIO');
   }else if(target == 'contact-link'){
-    console.log(target);
-  }else if(target == 'linkedin'){
-    
+    let contactForm = document.createElement('div') 
+    contactForm.style ="background-color: red;max-width: 25%";
+    contactForm.innerHTML = `<p class="body-p">Get in touch with me!</p>
+      <form
+        id="fs-frm"
+        name="simple-contact-form"
+        accept-charset="utf-8"
+        Referer='alexrodriguez.tech'
+        action="https://formspree.io/f/alexrod102797@gmail.com"
+        method="post"
+      >
+        <div class="form">
+          <label for="full-name">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            id="full-name"
+            placeholder="First and Last"
+            required=""
+          />
+          <label for="email-address">Email Address</label>
+          <input
+            type="email"
+            name="_replyto"
+            id="email-address"
+            placeholder="email@domain.com"
+            required=""
+          />
+          <label for="message">Message</label>
+          <textarea
+            rows="5"
+            name="message"
+            id="message"
+            placeholder="Hello Alex,"
+            required=""
+          ></textarea>
+          <input
+            type="hidden"
+            name="_subject"
+            id="email-subject"
+            value="Contact Form Submission"
+          />
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    `;
+    document.getElementById('landing-text').innerHTML = contactForm.innerHTML;
+  
+  }else if(target == 'resume-link'){
   }
 
 };
-
-
-
-
-
-
-
-
-/*
-burger.addEventListener("click", function () {
-  sideNavBarOpen = !sideNavBarOpen; //
-  extendOrCollapseWidth(sideNavBarOpen, sideNavBar);
-});
-
-sideNavBar.addEventListener("click", function () {
-  let target = event.target;
-  if (target.className === "nav-img") {
-    target = target.parentElement;
-  }
-  if (target.className === "sideNavBar-section") {
-    if (clickedSection) {
-      clickedSection.style.background = "";
-      clickedSection = target;
-      clickedSection.style.background = "steelblue";
-      sideNavBarOpen = !sideNavBarOpen; //
-      extendOrCollapseWidth(sideNavBarOpen, sideNavBar);
-    } else {
-      clickedSection = target;
-      console.log(clickedSection);
-      clickedSection.style.background = "steelblue";
-      sideNavBarOpen = !sideNavBarOpen; //
-      extendOrCollapseWidth(sideNavBarOpen, sideNavBar);
-    }
-  }
-});
-
-portfolio.addEventListener("click", function () {
-  let target = event.target;
-  if (target.id === "findmybeer") {
-    window.open(
-      "https://www.youtube.com/watch?v=W17TblhF8UI&ab_channel=IcelandSymphonyOrchestra",
-      "_blank"
-    );
-  } else if (target.id === "mobflix") {
-    window.open(
-      "https://www.youtube.com/watch?v=W17TblhF8UI&ab_channel=IcelandSymphonyOrchestra",
-      "_blank"
-    );
-  } else if (target.id === "nilclassdestroyer") {
-    window.open(
-      "https://www.youtube.com/watch?v=W17TblhF8UI&ab_channel=IcelandSymphonyOrchestra",
-      "_blank"
-    );
-  }
-});
-*/
