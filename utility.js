@@ -90,6 +90,6 @@ function aboutTextDeskTopLoad(){
     textType(aboutSpan, aboutText, ()=>{
       let aboutTextEl = document.getElementById('about-text');
      
-      blinker.innerText = '';
+      //blinker.innerText = '';
     });
 }
